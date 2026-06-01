@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.geometry.Insets?>                <!-- 2. imports : un par classe utilisée -->           <!--    (équivalent des import Java)    -->
+<?import javafx.scene.layout.VBox?>
 
 <!--
   TODO exercice 1 (étape 0) : écrire le contenu de cette vue FXML.
@@ -27,6 +29,25 @@
 -->
 
 <BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-            prefWidth="420.0" prefHeight="240.0">
+  prefWidth="420.0" prefHeight="240.0">
 
+  <padding>
+    <Insets top="20" right="20" bottom="20" left="20" />
+  </padding>
+  <top>
+    <Label text="Bienvenue dans le monde FXML !"
+      BorderPane.alignment="CENTER"
+      style="-fx-font-size: 20px;" />
+  </top>
+  <center>
+    <Label text="caca pipi"
+      wrapText="true"
+      BorderPane.alignment="CENTER"
+      textAlignment="CENTER" />
+  </center>
+  <bottom>
+    <Button fx:id="button"
+      text="D'accord,c'est magique."
+      BorderPane.alignment="CENTER" />
+  </bottom>
 </BorderPane>
