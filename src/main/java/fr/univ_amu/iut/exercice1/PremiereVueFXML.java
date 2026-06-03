@@ -10,21 +10,16 @@ import javafx.stage.Stage;
 /**
  * Exercice 1 : première vue décrite en FXML.
  *
- * <p>
- * Aucun code Java ne construit l'interface ici : tout est dans
- * {@code PremiereVueFXML.fxml}.
- * Cette classe se contente de <b>charger</b> le fichier FXML et de l'afficher
- * dans une {@link
+ * <p>Aucun code Java ne construit l'interface ici : tout est dans {@code PremiereVueFXML.fxml}.
+ * Cette classe se contente de <b>charger</b> le fichier FXML et de l'afficher dans une {@link
  * Stage}.
  *
- * <p>
- * Concepts introduits :
+ * <p>Concepts introduits :
  *
  * <ul>
- * <li>{@link FXMLLoader#load(URL)} : le pont entre XML et objets Java
- * <li>{@code getClass().getResource("...")} : chemin vers la ressource FXML
- * <li>Racine unique ({@code BorderPane}) retournée par
- * {@code FXMLLoader.load()}
+ *   <li>{@link FXMLLoader#load(URL)} : le pont entre XML et objets Java
+ *   <li>{@code getClass().getResource("...")} : chemin vers la ressource FXML
+ *   <li>Racine unique ({@code BorderPane}) retournée par {@code FXMLLoader.load()}
  * </ul>
  */
 public class PremiereVueFXML extends Application {
@@ -53,6 +48,5 @@ public class PremiereVueFXML extends Application {
     primaryStage.setScene(scene);
     primaryStage.setTitle("Première vue FXML");
     primaryStage.show();
-
   }
 }
