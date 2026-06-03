@@ -6,7 +6,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -71,15 +70,18 @@ class PremiereVueFXMLTest {
   @Test
   @Order(5)
   void le_label_de_bienvenue_est_affiche_dans_la_vue(FxRobot robot) {
-    Label titre = (Label) robot
-        .lookup(
-            node -> node instanceof Label labelNode
-                && labelNode.getText() != null
-                && labelNode.getText().contains("Bienvenue"))
-        .queryAll()
-        .stream()
-        .findFirst()
-        .orElse(null);
+    Label titre =
+        (Label)
+            robot
+                .lookup(
+                    node ->
+                        node instanceof Label labelNode
+                            && labelNode.getText() != null
+                            && labelNode.getText().contains("Bienvenue"))
+                .queryAll()
+                .stream()
+                .findFirst()
+                .orElse(null);
 
     assertThat(titre)
         .as("un Label contenant 'Bienvenue' doit être présent dans la vue FXML")
